@@ -4,10 +4,11 @@ body {
     margin-left: 20%;
 }
 .logo{
+    display: inline;
     margin-top: 5%;
-    height: 100px;
+    height: 10vh;
     width:auto;
-    margin-left: 35%;
+    margin-left: 37%;
 }
 .card-set {
     display: flex;
