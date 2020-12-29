@@ -1,6 +1,5 @@
 import React from 'react'
-import {Nav} from "react-bootstrap";
-import './SideNav.css'
+import '../styles/SideNav.css'
 
 const SideNav = () => {
     return (

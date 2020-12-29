@@ -1,9 +1,12 @@
 import React from 'react'
-import './InfoCard.css'
+import '../styles/InfoCard.css'
 
-const InfoCard = () => {
+const InfoCard = (props) => {
     return (
-        <div className = "info-card">I am a sample card.</div>
+        <div className = "info-card">
+            <h2>{props.title}</h2>
+            <a>{props.value}</a>
+        </div>
     )
 }
 

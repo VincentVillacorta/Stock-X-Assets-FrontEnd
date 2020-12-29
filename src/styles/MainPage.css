@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    left: 20%;
+    margin-left: 20%;
+}
+.logo{
+    margin-top: 5%;
+    height: 100px;
+    width:auto;
+    margin-left: 35%;
+}
+.card-set {
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+}

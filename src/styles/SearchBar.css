@@ -1,0 +1,22 @@
+.search-bar-box{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-top: 5%;   
+    position:relative;
+
+}
+.search-bar-box h1{
+    display: inline-block;
+    justify-self: left;
+    position: absolute;
+    width: 64%;
+}
+.search-bar {
+    display: inline-block;
+    position: absolute;
+    margin-top: 5%;
+    width: 80%;
+    padding: 1%;
+    font-size: 30px;
+}
