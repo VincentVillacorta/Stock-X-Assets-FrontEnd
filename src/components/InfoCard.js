@@ -5,7 +5,7 @@ const InfoCard = (props) => {
     return (
         <div className = "info-card">
             <h2>{props.title}</h2>
-            <a>{props.value}</a>
+            <p>{props.value}</p>
         </div>
     )
 }

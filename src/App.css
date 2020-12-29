@@ -1,8 +1,27 @@
 html
 {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
     overflow-x: hidden; 
+}
+
+.sideNav {
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    left:0;
+    background-color: #3fae2b;
+    text-align: center;
+}
+
+.sideNav-link-group {
+    margin-top: 65%;
+}
+
+.sideNav-link{
+    display: inline-block;
+    width: 73%;
+    color: white;
+    font-size: 2rem;
+    font-weight:450;
+    padding: 30px;
+    text-decoration: none;
 }

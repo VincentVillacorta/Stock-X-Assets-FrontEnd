@@ -6,9 +6,8 @@ body {
 .logo{
     display: inline;
     margin-top: 5%;
-    height: 10vh;
+    height: 6vw;
     width:auto;
-    margin-left: 37%;
 }
 .card-set {
     display: flex;

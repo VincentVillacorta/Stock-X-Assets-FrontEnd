@@ -5,7 +5,7 @@ import logo from '../images/stock-x-assets-logo.png'
 import SearchBar from './SearchBar'
 const MainPage = () => {
     return (
-        <div className>
+        <div className="main-page">
             <img className='logo' src={logo} alt="Application Logo"/>
             <div className='card-set'>
                 <InfoCard title="Collection Owner" value="Vince"/>

@@ -8,7 +8,7 @@ const SearchBar = () => {
                 <h1>My Collection</h1>
                 <button>Add New</button>
             </div>
-            <input className="search-bar" type="search" placeholder="Search..."/>
+            <input className="search-bar" type="search" placeholder="  Search..."/>
         </div>
     )
 }

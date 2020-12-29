@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 20%;
+}
+
+.profile-pic {
+    border-radius: 45pc;
+    height: 10rem;
+    width: auto;
+    margin-top: 20vh;
+}

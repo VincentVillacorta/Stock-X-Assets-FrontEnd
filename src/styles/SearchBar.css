@@ -43,6 +43,7 @@
 
 .search-bar {
     position: absolute;
+    font-size: large;
     right: 6.6%;
     width: 67%;
     height: 6vh;
