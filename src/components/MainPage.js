@@ -8,7 +8,7 @@ const MainPage = () => {
         <div className>
             <img className='logo' src={logo} alt="Application Logo"/>
             <div className='card-set'>
-                <InfoCard title="Collection Owner" value="Temp Name"/>
+                <InfoCard title="Collection Owner" value="Vince"/>
                 <InfoCard title="Overall Value" value="$XXX"/>
                 <InfoCard title="Number of Items" value="$XXX"/>
             </div>

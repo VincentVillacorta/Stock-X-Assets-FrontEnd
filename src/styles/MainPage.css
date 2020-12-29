@@ -1,7 +1,6 @@
 body {
     display: flex;
     justify-content: center;
-    left: 20%;
     margin-left: 20%;
 }
 .logo{

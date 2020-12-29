@@ -4,4 +4,18 @@
     width: 20%;
     left:0;
     background-color: #3fae2b;
+    text-align: center;
+}
+
+.sideNav-link-group {
+    margin-top: 65%;
+}
+
+.sideNav-link{
+    display: inline-block;
+    width: 73%;
+    color: white;
+    font-size: 30px;
+    font-weight:450;
+    padding: 30px;
 }
