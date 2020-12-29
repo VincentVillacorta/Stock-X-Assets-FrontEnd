@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    left: 20%;
+    margin-left: 20%;
+}
+.card-set {
+    width: 68vw;
+    align-items: center;
+    margin-left: 12%;
+}
