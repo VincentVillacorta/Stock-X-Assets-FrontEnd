@@ -5,7 +5,7 @@
 }
 .search-bar-title{
     display: inline-block;
-    position:relative;
+    position: relative;
     white-space: nowrap;
     width: 85%;
     margin-top: 5%;
@@ -47,4 +47,12 @@
     right: 6.6%;
     width: 67%;
     height: 6vh;
+    padding: 1% 1%;
+}
+
+.searches{
+    margin-top: 5.9vh;
+    width: 82.7%;
+    margin-left: 8.45%;
+    border: 1px solid;
 }

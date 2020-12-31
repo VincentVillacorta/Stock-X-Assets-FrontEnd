@@ -1,0 +1,21 @@
+.search-item {
+    font-size: 12px;
+    height: 10vh;
+    width: 100%;
+    padding: 0;
+}
+
+.search-item {
+    margin: 0;
+}
+
+.search-item:hover{
+    background-color: lightgrey;
+}
+
+.item-image {
+    float: left;
+    height: 10vh;
+    width: auto;
+    padding-left: 20px;
+}

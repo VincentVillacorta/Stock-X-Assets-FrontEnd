@@ -3,6 +3,8 @@ import InfoCard from './InfoCard'
 import '../styles/MainPage.css'
 import logo from '../images/stock-x-assets-logo.png'
 import SearchBar from './SearchBar'
+import MyCollection from './MyCollection'
+
 const MainPage = () => {
     return (
         <div className="main-page">
@@ -13,6 +15,7 @@ const MainPage = () => {
                 <InfoCard title="Number of Items" value="$XXX"/>
             </div>
             <SearchBar/>
+            <MyCollection/>
         </div>
         
     )
