@@ -1,0 +1,31 @@
+.my-collection-box{
+    display: block;
+    height: 20vh;
+    margin-top: 4vh;
+}
+
+.my-collection-title{
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    width: 85%;
+    margin-top: 5%;
+    margin-left: 7.8%;
+    margin-right: 8.2%;
+}
+.my-collection-title h1{
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    margin-bottom: 0;
+    margin-left: 1px;
+}
+
+.my-collection{
+    position: absolute;
+    font-size: large;
+    right: 6.6%;
+    width: 67%;
+    height: 6vh;
+    padding: 1% 1%;
+}

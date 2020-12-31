@@ -1,23 +1,65 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../styles/Login.css'
 
-const Login = () => {
+const Login = (props) => {
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
 
+    const onUsername = (event) => {
+        setUsername(event.target.value)
+    }
+    const onPassword = (event) => {
+        setPassword(event.target.value)
+    }
+
+    const onClickHandler = (option) => {
+        if(option === 'login'){
+            fetch('https://vv-stockx-api.herokuapp.com/users/login', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: username, 
+                    password: password
+                })
+        })
+            .then(res => res.json())
+            .then(result => {props.changeUserInfo(result)})
+        }
+        else{
+            fetch('https://vv-stockx-api.herokuapp.com/users', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: username, 
+                    password: password
+                })
+        })
+            .then(res => res.json())
+            .then(result => {console.log(result)})
+        }
+        
+    }
     
     return (
         <div className="login-page">
             <div className='login-box'>
                 <p>Sign In</p>
-                <form className="form-box">
-                    <label for="username">Username:</label><br/>
-                    <input type="text" id="username"></input><br/>
-                    <label for="password">Password:</label><br/>
-                    <input type="password" id="password"></input><br/>
+                <div className="form-box">
+                    <input type="text" id="username" onChange={onUsername}></input><br/>
+                    <input type="password" id="password" onChange={onPassword}></input><br/>
                     <div className="button-group">
-                        <button>Login</button>
-                        <button className="button-right">Create New</button>
+                        <button onClick={() => onClickHandler('login')} >Login</button>
+                        <button onClick={() => onClickHandler('create')} className='button-right'>Create New</button>
                     </div>
-                </form>
+                </div>
             </div>
             
         </div>

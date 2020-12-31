@@ -1,11 +1,9 @@
 .search-item {
+    background-color: green;
     font-size: 12px;
     height: 10vh;
     width: 100%;
     padding: 0;
-}
-
-.search-item {
     margin: 0;
 }
 

@@ -1,24 +1,24 @@
-import React, { useState, useEffect }  from 'react'
+import React, { useState}  from 'react'
 import SearchItem from './SearchItem'
 
 import '../styles/SearchBar.css'
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     const [searchTerm, setSearchTerm] = useState([]);
 
     const onChangeHandler = (event) => {
-        if(event.target.value == ''){
+        if(event.target.value === ''){
             setSearchTerm([])
         }
         else{
-            const searchList = fetch('https://vv-stockx-api.herokuapp.com/search?item_name=' + event.target.value,{crossDomain: true})
+            fetch('https://vv-stockx-api.herokuapp.com/search?item_name=' + event.target.value,{crossDomain: true})
             .then(res => res.json())
             .then(result => {
                 console.log(result)
                 if(Array.isArray(result)){
                     setSearchTerm([])
                     result.forEach((item) => {
-                        setSearchTerm( searchTerm => [...searchTerm, <SearchItem name={item.name} url={item.thumbnail_url} price={item.price}/>])
+                        setSearchTerm( searchTerm => [...searchTerm, <SearchItem name={item.name} url={item.thumbnail_url} price={item.price} collectionArr={props.collectionArr} setCollectionArr={props.setCollectionArr}/>])
                     })
                 }
                 else{

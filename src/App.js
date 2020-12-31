@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import Login from './components/Login'
 import MainPage from './components/MainPage'
@@ -14,6 +14,10 @@ import {
 
 
 function App() {
+  const [userInfo, changeUserInfo] = useState({})
+  useEffect(() => {
+    console.log(userInfo.item_collection)
+  })
 
   return (
     <div className="App">
@@ -21,17 +25,17 @@ function App() {
         <div>
             <div className="sideNav">
                 <div className="sideNav-link-group">
-                    <Link class="sideNav-link" to="/">Login</Link>
-                    <Link class="sideNav-link" to="/dashboard">Dashboard</Link>         
-                    <Link class="sideNav-link" to="/about">About</Link>
+                    <Link className="sideNav-link" to="/">Login</Link>
+                    <Link className="sideNav-link" to="/dashboard">Dashboard</Link>         
+                    <Link className="sideNav-link" to="/about">About</Link>
                 </div>
             </div>
             <Switch>
             <Route exact path="/">
-                <Login />
+                <Login changeUserInfo={changeUserInfo}/>
             </Route>
             <Route path="/dashboard">
-                <MainPage />
+                <MainPage userInfo={userInfo}changeUserInfo={changeUserInfo}/>
             </Route>
             <Route path="/about">
                 <AboutMe />
