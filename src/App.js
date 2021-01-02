@@ -15,9 +15,6 @@ import {
 
 function App() {
   const [userInfo, changeUserInfo] = useState({})
-  useEffect(() => {
-    console.log(userInfo.item_collection)
-  })
 
   return (
     <div className="App">

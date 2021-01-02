@@ -14,7 +14,8 @@ const Login = (props) => {
 
     const onClickHandler = (option) => {
         if(option === 'login'){
-            fetch('https://vv-stockx-api.herokuapp.com/users/login', {
+            // fetch('https://vv-stockx-api.herokuapp.com/users/login', {
+            fetch('http://localhost:4000/users/login', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -30,7 +31,8 @@ const Login = (props) => {
             .then(result => {props.changeUserInfo(result)})
         }
         else{
-            fetch('https://vv-stockx-api.herokuapp.com/users', {
+            // fetch('https://vv-stockx-api.herokuapp.com/users', {
+                fetch('http://localhost:4000/users', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
