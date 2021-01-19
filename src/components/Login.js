@@ -4,6 +4,7 @@ import '../styles/Login.css'
 const Login = (props) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [errorAlert, setErrorAlert] = useState(false)
 
     const onUsername = (event) => {
         setUsername(event.target.value)
@@ -13,6 +14,9 @@ const Login = (props) => {
     }
 
     const onClickHandler = (option) => {
+
+        let statusCode = 400;
+
         if(option === 'login'){
             // fetch('https://vv-stockx-api.herokuapp.com/users/login', {
             fetch('http://localhost:4000/users/login', {
@@ -27,8 +31,14 @@ const Login = (props) => {
                     password: password
                 })
         })
-            .then(res => res.json())
-            .then(result => {props.changeUserInfo(result)})
+            .then(res => {
+                statusCode = res.status
+                return res.json()})
+            .then(result => {
+                if(statusCode === 200)
+                    props.changeUserInfo(result)
+                else
+                    console.log(statusCode)})
         }
         else{
             // fetch('https://vv-stockx-api.herokuapp.com/users', {
@@ -51,20 +61,17 @@ const Login = (props) => {
     }
     
     return (
-        <div className="login-page">
             <div className='login-box'>
-                <p>Sign In</p>
+                <h1>Sign In</h1>
                 <div className="form-box">
-                    <input type="text" id="username" onChange={onUsername}></input><br/>
-                    <input type="password" id="password" onChange={onPassword}></input><br/>
+                    <input type="text" id="username" onChange={onUsername} placeholder="Username" ></input><br/>
+                    <input type="password" id="password" onChange={onPassword} placeholder="Password"></input><br/>
                     <div className="button-group">
-                        <button onClick={() => onClickHandler('login')} >Login</button>
-                        <button onClick={() => onClickHandler('create')} className='button-right'>Create New</button>
+                        <button onClick={() => onClickHandler('login')} className='login-button'>Login</button>
+                        <button onClick={() => onClickHandler('create')} className='create-button'>Create New</button>
                     </div>
                 </div>
             </div>
-            
-        </div>
         
     )
 }

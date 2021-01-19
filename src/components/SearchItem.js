@@ -48,11 +48,10 @@ const SearchItem = (props) => {
     }
 
     return (
-        <div className ="search-item" >
+        <div className ="search-item" onClick={onClickHandler}>
             <img className='item-image' src={props.url} alt={props.name} />
             <p>{props.name}</p>
             <p>{props.price}</p>
-            <button onClick={onClickHandler}>Add</button>
         </div>
     )
 }

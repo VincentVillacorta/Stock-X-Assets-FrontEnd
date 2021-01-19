@@ -1,16 +1,3 @@
-body {
-    display: flex;
-    justify-content: center;
-    margin-left: 20%;
-}
-.logo{
-    display: inline;
-    margin-top: 5%;
-    height: 6vw;
-    width:auto;
-}
-.card-set {
-    display: flex;
-    width: 80vw;
-    justify-content: center;
+.main-page{
+    display:flex;
 }

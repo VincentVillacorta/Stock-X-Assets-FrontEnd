@@ -1,20 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import InfoCard from './InfoCard'
 import '../styles/MainPage.css'
-import logo from '../images/stock-x-assets-logo.png'
 import SearchBar from './SearchBar'
 import MyCollection from './MyCollection'
 import CollectionItem from './CollectionItem'
 const rand = require('random-key')
 
-function isEmpty(obj) {
-    for(var key in obj) {
-        if(obj.hasOwnProperty(key))
-            return false;
-    }
-    console.log(obj)
-    return true;
-}
 
 const MainPage = (props) => {
     const [collectionArr, setCollectionArr] = useState([])
@@ -57,16 +48,10 @@ const MainPage = (props) => {
 
     return (
         <div className="main-page">
-            <img className='logo' src={logo} alt="Application Logo"/>
-            <div className='card-set'>
-                <InfoCard title="Collection Owner" value={!isEmpty(props.userInfo)? props.userInfo.username : '__'}/>
-                <InfoCard title="Overall Value" value={userValue}/>
-                <InfoCard title="Number of Items" value={numItems}/>
-            </div>
+            <MyCollection collectionArr={collectionArr} setCollectionArr={setCollectionArr} userInfo={props.userInfo} userValue={userValue} numItems={numItems}/>
             <SearchBar collectionArr={collectionArr} setCollectionArr={setCollectionArr}
                         userValue={userValue} setUserValue={setUserValue}
                         setNumItems={setNumItems}/>
-            <MyCollection collectionArr={collectionArr} setCollectionArr={setCollectionArr}/>
         </div>
         
     )

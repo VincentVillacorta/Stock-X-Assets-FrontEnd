@@ -36,7 +36,6 @@ const SearchBar = (props) => {
         <div className ="search-bar-box">
             <div className="search-bar-title">
                 <h1>Add New Item</h1>
-                <button>Add</button>
             </div>
             <input className="search-bar" type="search" placeholder="Search..." onChange={onChangeHandler} />
             <div className = "searches">{searchTerm}</div>

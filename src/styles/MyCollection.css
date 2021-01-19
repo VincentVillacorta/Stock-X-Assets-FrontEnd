@@ -1,31 +1,29 @@
+.header-group{
+    display: flex;
+    align-content: flex-end;
+}
+
+.my-collection-title {
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
 .my-collection-box{
-    display: block;
-    height: 20vh;
-    margin-top: 4vh;
+    background-color: white;
+    flex: 3;
+    height: 80vh;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 15px;
+    align-items: center;
+
+    border-radius: 10px;
+
 }
 
-.my-collection-title{
-    display: inline-block;
-    position: relative;
-    white-space: nowrap;
-    width: 85%;
-    margin-top: 5%;
-    margin-left: 7.8%;
-    margin-right: 8.2%;
-}
-.my-collection-title h1{
-    position: absolute;
-    left: 0;
-    bottom: 5px;
-    margin-bottom: 0;
-    margin-left: 1px;
-}
-
-.my-collection{
-    position: absolute;
-    font-size: large;
-    right: 6.6%;
-    width: 67%;
-    height: 6vh;
-    padding: 1% 1%;
+.my-collection {
+    height: 50vh;
+    overflow-y: scroll;
 }

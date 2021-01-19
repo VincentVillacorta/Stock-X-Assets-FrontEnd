@@ -1,50 +1,65 @@
-.login-page {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-left: 20%;
-}
-
 .login-box {
-    display: inline-block;
-    position: relative;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 1px 2px 2px 1px gray;
-    padding: 7% 15% 20%;
-    margin-top: 25vh;
+    margin: auto;
+    margin-top: 10%;
+    background-color: white;
+    width: 300px;
+    height: 280px;
+    border: 10px black;
+    border-radius: 10px;
 }
 
-.login-box p{
-    font-size: 40px;
-    margin-top: 0;
+.login-box h1{
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+
+.form-box input{
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    padding: 5px 10px;
     margin-bottom: 20px;
 }
 
-.form-box{
-    text-align: left;
-    font-size: 20px;
-}
-
-.form-box input{
-    box-sizing: border-box;
-    height: auto;
-    width: 25vw;
-    font-size: 30px;
-    padding: 1% 3%;
+.form-box input:focus {
+    outline: none;
 }
 
 .form-box button{
     height: auto;
-    font-size: 18px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 10%;
-    margin-bottom: 0;
-    width: 12vw;
+    font-size: 15px;
+    width: 210px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+
+    outline: none;
+    border:none;
+    border-radius: 10px;
+}
+
+.login-button:hover{
+    background-color: #dedede;
+}
+
+.login-button:active{
+    border: none;
+    background-color: #d4d4d4;
+}
+
+.create-button{
+    
+    background-color: #3fae2b;
+    color: white;
+}
+
+.create-button:hover {
+    background-color: #39a127;
+}
+
+.create-button:active {
+    background-color: #339123;
 }
 
 
-.button-right{
-    float: right;
-}
