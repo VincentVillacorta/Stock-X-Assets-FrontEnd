@@ -50,7 +50,12 @@ const MainPage = (props) => {
          // fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
             fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
                 method: 'GET',
-                credentials: 'include'})
+                credentials: 'include',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+                })
                 .then(res => res.json())
                 .then(result => {setUserValue(result)})
                 .catch((error) => console.log(error))
@@ -58,7 +63,12 @@ const MainPage = (props) => {
             
             fetch('https://vv-stockx-api.herokuapp.com/users/bidvalue', {
                 method: 'GET',
-                credentials: 'include'})
+                credentials: 'include',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+                })
                 .then(res => res.json())
                 .then(result => {setBidValue(result)})
                 .catch((error) => console.log(error))
