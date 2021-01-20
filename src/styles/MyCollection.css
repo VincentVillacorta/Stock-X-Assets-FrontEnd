@@ -1,9 +1,16 @@
+@keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .header-group{
     display: flex;
     align-content: flex-end;
 }
 
 .my-collection-title {
+    color: gray;
+    font-size: 14px;
     text-align: left;
     margin-top: 30px;
     margin-left: 25px;
@@ -11,6 +18,7 @@
 }
 
 .my-collection-box{
+    animation: fadeIn 1s;
     background-color: white;
     flex: 3;
     height: 80vh;
@@ -24,6 +32,8 @@
 }
 
 .my-collection {
+    color:black;
     height: 50vh;
     overflow-y: scroll;
+    border: 1px groove black;
 }

@@ -1,7 +1,7 @@
 .collection-item {
     font-size: 12px;
     height: 10vh;
-    width: 55vw;
+    width: 100%;
     margin: 0;
     
     overflow: hidden;
@@ -35,4 +35,5 @@
 .delete-button {   
     float: right;
     margin-top: 3.5vh;
+    margin-right: 20px;
 }

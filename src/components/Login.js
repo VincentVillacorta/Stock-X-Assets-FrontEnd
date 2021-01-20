@@ -64,26 +64,16 @@ const Login = (props) => {
         })
             .then(res => res.json())
             .then(result => {
-                props.changeUserInfo(result)
-                history.push('/dashboard')
-            })
+                if(statusCode === 201){
+                    props.changeUserInfo(result)
+                    history.push('/dashboard')
+                }
+                else
+                    console.log(statusCode)})
         }
         
     }
 
-    // if(canUpdate){
-    //  // fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
-    //     fetch('http://localhost:4000/users/fullvalue', {
-    //         method: 'GET',
-    //         credentials: 'include'})
-    //         .then(res => res.json())
-    //         .then(result => {console.log(result)})
-    //         .catch((error) => console.log(error))
-        
-    //     setCanUpdate(false)
-        
-    // }
-    
     return (
             <div className='login-box'>
                 <h1>Sign In</h1>

@@ -18,7 +18,13 @@ import {
 function App() {
   const [userInfo, changeUserInfo] = useState({})
   const [waitingForLogin, setWaitingForLogin] = useState(true)
+  const [showAbout, setShowAbout] = useState(false)
   const [mainPageCanUpdate, setMainPageCanUpdate] = useState(false)
+  
+  const onAboutClick = (event) => {
+    const val = !showAbout;
+    setShowAbout(val)
+  }
 
   return (
     <div className="App">
@@ -29,9 +35,10 @@ function App() {
                 <div className="link-group">
                     <Link className="link" to="/">Login</Link>
                     <Link className="link" to="/dashboard">Dashboard</Link> 
-                    <button className="link about-button">About</button>   
+                    <button className="link about-button" onClick={onAboutClick} >About</button>   
                 </div>
             </div>
+            {showAbout? <AboutMe/>: null}
             <Switch>
             <Route exact path="/">
                 <Login changeUserInfo={changeUserInfo} waitingForLogin={waitingForLogin} setWaitingForLogin={setWaitingForLogin}/>

@@ -1,12 +1,32 @@
-body {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+@keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
 }
+
+
+
+.about-box {
+    position: fixed;
+    z-index: 1;
+    animation: fadeIn 1s;
+    margin-top: 15vh;
+    margin-bottom: 50px;
+    margin-left: 35vw;
+    background-color: white;
+    width: 30vw;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-box p{
+    margin: 50px 30px;
+}
+
 
 .profile-pic {
     border-radius: 45pc;
-    height: 10rem;
+    height: 10vh;
     width: auto;
-    margin-top: 20vh;
+    margin-top: 50px;
 }
+
