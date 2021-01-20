@@ -48,7 +48,7 @@ const MainPage = (props) => {
                 })
     
          // fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
-            fetch('http://localhost:4000/users/fullvalue', {
+            fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
                 method: 'GET',
                 credentials: 'include'})
                 .then(res => res.json())
@@ -56,7 +56,7 @@ const MainPage = (props) => {
                 .catch((error) => console.log(error))
             
             
-            fetch('http://localhost:4000/users/bidvalue', {
+            fetch('https://vv-stockx-api.herokuapp.com/users/bidvalue', {
                 method: 'GET',
                 credentials: 'include'})
                 .then(res => res.json())
