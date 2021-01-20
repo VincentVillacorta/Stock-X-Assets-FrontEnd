@@ -18,12 +18,17 @@ const SearchItem = (props) => {
             body: JSON.stringify({
                 "item_name": props.name,
                 "item_url": props.url,
-                "item_price": props.price
+                "item_price": props.price,
+                "item_bid_price": props.bid_price
             })
         })
 
         props.setUserValue((userValue) => {
             return userValue + props.price
+        })
+
+        props.setBidValue((bidValue) => {
+            return bidValue + props.bid_price
         })
 
         props.setNumItems((numItems) => {
@@ -38,9 +43,11 @@ const SearchItem = (props) => {
                     name={props.name} 
                     url={props.url} 
                     price={props.price}
+                    bid_price={props.bid_price}
                     collectionArr={collectionArr}
                     setCollectionArr={props.setCollectionArr}
                     setUserValue={props.setUserValue}
+                    setBidValue={props.setBidValue}
                     setNumItems={props.setNumItems}/>
                 ]
         })
@@ -50,8 +57,9 @@ const SearchItem = (props) => {
     return (
         <div className ="search-item" onClick={onClickHandler}>
             <img className='item-image' src={props.url} alt={props.name} />
-            <p>{props.name}</p>
-            <p>{props.price}</p>
+            <h1>{props.name}</h1>
+            <p>Retail Price: ${props.price}</p>
+            <p>Highest Bid: ${props.bid_price}</p>
         </div>
     )
 }

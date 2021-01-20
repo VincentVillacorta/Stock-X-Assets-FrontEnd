@@ -21,7 +21,8 @@ const MyCollection = (props) => {
     return (
         <div className='my-collection-box'>
             <div className='header-group'>
-                <InfoCard title="Overall Value" value={props.userValue}/>
+                <InfoCard title="Overall Value" value={props.bidValue} money={true}/>
+                <InfoCard title="Retail Value" value={props.userValue} money={true}/>
                 <InfoCard title="Number of Items" value={props.numItems}/>
                 <InfoCard title="Collection Owner" value={!isEmpty(props.userInfo)? props.userInfo.username : '__'}/>
             </div>

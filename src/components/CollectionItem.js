@@ -22,6 +22,11 @@ const CollectionItem = (props) => {
             return numItems - 1
         })
         
+        props.setBidValue((bidValue) => {
+            return bidValue - props.bid_price
+        })
+
+        
         props.setUserValue((userValue) => {
             return userValue - props.price
         })
@@ -39,7 +44,7 @@ const CollectionItem = (props) => {
             
             <button className='delete-button' onClick={onDeleteClickHandler}>Delete</button>
             <p className='item-name'>{props.name}</p>
-            <p className='item-price'>{props.price ? props.price : 'unlisted'}</p>
+            <p className='item-price'>Retail: ${props.price ? props.price : 'unlisted'} | Highest Bid: ${props.bid_price ? props.bid_price : 'unlisted'}</p>
         </div>
     )
     

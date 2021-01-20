@@ -17,6 +17,8 @@ import {
 
 function App() {
   const [userInfo, changeUserInfo] = useState({})
+  const [waitingForLogin, setWaitingForLogin] = useState(true)
+  const [mainPageCanUpdate, setMainPageCanUpdate] = useState(false)
 
   return (
     <div className="App">
@@ -26,19 +28,16 @@ function App() {
               <img src={logo}/>
                 <div className="link-group">
                     <Link className="link" to="/">Login</Link>
-                    <Link className="link" to="/dashboard">Dashboard</Link>         
-                    <Link className="link" to="/about">About</Link>
+                    <Link className="link" to="/dashboard">Dashboard</Link> 
+                    <button className="link about-button">About</button>   
                 </div>
             </div>
             <Switch>
             <Route exact path="/">
-                <Login changeUserInfo={changeUserInfo}/>
+                <Login changeUserInfo={changeUserInfo} waitingForLogin={waitingForLogin} setWaitingForLogin={setWaitingForLogin}/>
             </Route>
             <Route path="/dashboard">
                 <MainPage userInfo={userInfo}changeUserInfo={changeUserInfo}/>
-            </Route>
-            <Route path="/about">
-                <AboutMe />
             </Route>
             </Switch>
         </div>

@@ -27,6 +27,8 @@
 }
 .item-price {
     font-size: 12px;
+    font-weight: bold;
+    color: gray;
     margin-top: 2px;
 }
 

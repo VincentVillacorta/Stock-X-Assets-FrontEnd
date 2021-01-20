@@ -19,9 +19,10 @@ const SearchBar = (props) => {
                     setSearchTerm([])
                     result.forEach((item) => {
                         console.log(item.price)
-                        setSearchTerm( searchTerm => [...searchTerm, <SearchItem name={item.name} url={item.thumbnail_url} price={item.price} 
+                        setSearchTerm( searchTerm => [...searchTerm, <SearchItem name={item.name} url={item.thumbnail_url} price={item.price} bid_price={item.highest_bid}
                             collectionArr={props.collectionArr} setCollectionArr={props.setCollectionArr}
-                            userValue={props.userValue} setUserValue={props.setUserValue} setNumItems={props.setNumItems}/>])
+                            userValue={props.userValue} setUserValue={props.setUserValue} 
+                            bidValue={props.bidValue} setBidValue={props.setBidValue} setNumItems={props.setNumItems}/>])
                     })
                 }
                 else{

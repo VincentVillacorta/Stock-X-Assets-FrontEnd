@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react'
-import InfoCard from './InfoCard'
 import '../styles/MainPage.css'
 import SearchBar from './SearchBar'
 import MyCollection from './MyCollection'
 import CollectionItem from './CollectionItem'
-const rand = require('random-key')
 
+const rand = require('random-key')
 
 const MainPage = (props) => {
     const [collectionArr, setCollectionArr] = useState([])
+    const [bidValue, setBidValue] = useState('loading...')
     const [userValue, setUserValue] = useState('loading...')
     const [numItems, setNumItems] = useState(0)
     const [canUpdate, setCanUpdate] = useState(true)
@@ -26,9 +26,11 @@ const MainPage = (props) => {
                     name={item.item_name} 
                     url={item.item_url} 
                     price={item.item_price}
+                    bid_price={item.item_bid_price}
                     collectionArr={collectionArr}
                     setCollectionArr={setCollectionArr}
                     setUserValue={setUserValue}
+                    setBidValue={props.setBidValue}
                     setNumItems={setNumItems}/>])
             })
 
@@ -40,17 +42,28 @@ const MainPage = (props) => {
             .then(result => {setUserValue(result)})
             .catch((error) => console.log(error))
         
-         }
+        
+        fetch('http://localhost:4000/users/bidvalue', {
+            method: 'GET',
+            credentials: 'include'})
+            .then(res => res.json())
+            .then(result => {setBidValue(result)})
+            .catch((error) => console.log(error))
+        
         setCanUpdate(false)
+        }
     }
 
     
 
     return (
         <div className="main-page">
-            <MyCollection collectionArr={collectionArr} setCollectionArr={setCollectionArr} userInfo={props.userInfo} userValue={userValue} numItems={numItems}/>
+            <MyCollection collectionArr={collectionArr} setCollectionArr={setCollectionArr}
+                         userInfo={props.userInfo} userValue={userValue} 
+                         bidValue={bidValue} numItems={numItems}/>
             <SearchBar collectionArr={collectionArr} setCollectionArr={setCollectionArr}
                         userValue={userValue} setUserValue={setUserValue}
+                        bidValue={bidValue} setBidValue={setBidValue}
                         setNumItems={setNumItems}/>
         </div>
         
