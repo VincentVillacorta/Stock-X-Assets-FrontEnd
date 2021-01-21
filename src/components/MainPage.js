@@ -50,6 +50,7 @@ const MainPage = (props) => {
          // fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
             fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
                 method: 'GET',
+                crossDomain: true,
                 credentials: 'include',
                 headers: {
                     'Accept': 'application/json',
@@ -64,6 +65,7 @@ const MainPage = (props) => {
             fetch('https://vv-stockx-api.herokuapp.com/users/bidvalue', {
                 method: 'GET',
                 credentials: 'include',
+                crossDomain: true,
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',

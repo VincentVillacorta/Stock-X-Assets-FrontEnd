@@ -10,6 +10,7 @@ const SearchItem = (props) => {
         
         fetch('https://vv-stockx-api.herokuapp.com/users/items', {
             method: 'PATCH',
+            crossDomain: true,
             credentials: 'include',
             headers: {
                 'Accept': 'application/json',

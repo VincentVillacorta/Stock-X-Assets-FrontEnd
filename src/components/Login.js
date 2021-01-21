@@ -28,6 +28,7 @@ const Login = (props) => {
             fetch('https://vv-stockx-api.herokuapp.com/users/login', {
                 method: 'POST',
                 credentials: 'include',
+                crossDomain: true,
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
@@ -53,6 +54,7 @@ const Login = (props) => {
                 fetch('https://vv-stockx-api.herokuapp.com/users', {
                 method: 'POST',
                 credentials: 'include',
+                crossDomain: true,
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
