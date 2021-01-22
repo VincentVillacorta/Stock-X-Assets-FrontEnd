@@ -41,7 +41,7 @@ const MainPage = (props) => {
                         setNumItems={setNumItems}/>])
                 })
     
-            fetch('https://localhost:3000/users/fullvalue', {
+            fetch('http://localhost:3000/users/fullvalue', {
             // fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
                 method: 'GET',
                 crossDomain: true,
@@ -58,7 +58,7 @@ const MainPage = (props) => {
                     setUserValue(result.full_value)})
                 .catch((error) => console.log(error))
             
-            fetch('https://localhost:3000/users/bidvalue', {
+            fetch('http://localhost:3000/users/bidvalue', {
             // fetch('https://vv-stockx-api.herokuapp.com/users/bidvalue', {
                 method: 'GET',
                 credentials: 'include',
