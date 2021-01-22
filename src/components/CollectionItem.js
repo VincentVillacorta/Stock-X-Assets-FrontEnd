@@ -6,7 +6,8 @@ const CollectionItem = (props) => {
 
     const onDeleteClickHandler = (event) => {
         
-        fetch('https://vv-stockx-api.herokuapp.com/users/items', {
+        fetch('http://localhost:3000/users/items', {
+        // fetch('https://vv-stockx-api.herokuapp.com/users/items', {
             method: 'DELETE',
             credentials: 'include',
             headers: {
