@@ -8,8 +8,8 @@ const SearchItem = (props) => {
 
     const onClickHandler = (event) => {
         
-        fetch('http://localhost:3000/users/items', {
-        // fetch('https://vv-stockx-api.herokuapp.com/users/items', {
+        // fetch('http://localhost:3000/users/items', {
+        fetch('https://vv-stockx-api.herokuapp.com/users/items', {
             method: 'PATCH',
             crossDomain: true,
             credentials: 'include',

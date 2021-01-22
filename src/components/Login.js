@@ -24,8 +24,8 @@ const Login = (props) => {
 
         let statusCode = 400;
         if(option === 'login'){
-            fetch('http://localhost:3000/users/login', {
-            // fetch('https://vv-stockx-api.herokuapp.com/users/login', {
+            // fetch('http://localhost:3000/users/login', {
+            fetch('https://vv-stockx-api.herokuapp.com/users/login', {
                 method: 'POST',
                 credentials: 'include',
                 crossDomain: true,
@@ -50,8 +50,8 @@ const Login = (props) => {
                     console.log(statusCode)})
         }
         else{
-                fetch('http://localhost:3000/users', {
-                // fetch('https://vv-stockx-api.herokuapp.com/users', {
+                // fetch('http://localhost:3000/users', {
+                fetch('https://vv-stockx-api.herokuapp.com/users', {
                 method: 'POST',
                 credentials: 'include',
                 crossDomain: true,

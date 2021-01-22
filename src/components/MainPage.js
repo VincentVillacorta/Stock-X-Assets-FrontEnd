@@ -41,8 +41,8 @@ const MainPage = (props) => {
                         setNumItems={setNumItems}/>])
                 })
     
-            fetch('http://localhost:3000/users/fullvalue', {
-            // fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
+            // fetch('http://localhost:3000/users/fullvalue', {
+            fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
                 method: 'GET',
                 crossDomain: true,
                 credentials: 'include',
@@ -53,13 +53,11 @@ const MainPage = (props) => {
                 })
                 .then(res => res.json())
                 .then(result => {
-                    console.log(result)
-                    console.log(result.full_value)
-                    setUserValue(result.full_value)})
+                    setUserValue(parseInt(result.full_value, 10))})
                 .catch((error) => console.log(error))
             
-            fetch('http://localhost:3000/users/bidvalue', {
-            // fetch('https://vv-stockx-api.herokuapp.com/users/bidvalue', {
+            // fetch('http://localhost:3000/users/bidvalue', {
+            fetch('https://vv-stockx-api.herokuapp.com/users/bidvalue', {
                 method: 'GET',
                 credentials: 'include',
                 crossDomain: true,
@@ -70,9 +68,7 @@ const MainPage = (props) => {
                 })
                 .then(res => res.json())
                 .then(result => {
-                    console.log(result)
-                    console.log(result.bid_value)
-                    setBidValue(result.bid_value)})
+                    setBidValue(parseInt(result.bid_value, 10))})
                 .catch((error) => console.log(error))
             
             setCanUpdate(false)
