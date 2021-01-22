@@ -52,7 +52,7 @@ const MainPage = (props) => {
                 }
                 })
                 .then(res => res.json())
-                .then(result => {setUserValue(result)})
+                .then(result => {setUserValue(result.full_value)})
                 .catch((error) => console.log(error))
             
             fetch('https://localhost:3000/users/bidvalue', {
@@ -66,7 +66,7 @@ const MainPage = (props) => {
                 }
                 })
                 .then(res => res.json())
-                .then(result => {setBidValue(result)})
+                .then(result => {setBidValue(result.bid_value)})
                 .catch((error) => console.log(error))
             
             setCanUpdate(false)

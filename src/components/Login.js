@@ -50,7 +50,7 @@ const Login = (props) => {
                     console.log(statusCode)})
         }
         else{
-            fetch('http://localhost:3000/users', {
+                fetch('http://localhost:3000/users', {
                 // fetch('https://vv-stockx-api.herokuapp.com/users', {
                 method: 'POST',
                 credentials: 'include',
