@@ -11,7 +11,8 @@ const SearchBar = (props) => {
             setSearchTerm([])
         }
         else{
-            fetch('https://vv-stockx-api.herokuapp.com/search?item_name=' + event.target.value,
+            fetch('http://localhost:3000/search?item_name=' + event.target.value,
+            // fetch('https://vv-stockx-api.herokuapp.com/search?item_name=' + event.target.value,
             {   
                 crossDomain: true,
                 credentials: 'include',

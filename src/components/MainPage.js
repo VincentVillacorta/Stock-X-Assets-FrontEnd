@@ -3,13 +3,7 @@ import '../styles/MainPage.css'
 import SearchBar from './SearchBar'
 import MyCollection from './MyCollection'
 import CollectionItem from './CollectionItem'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useHistory
-  } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 const rand = require('random-key')
 
@@ -47,8 +41,8 @@ const MainPage = (props) => {
                         setNumItems={setNumItems}/>])
                 })
     
-         // fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
-            fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
+            fetch('https://localhost:3000/users/fullvalue', {
+            // fetch('https://vv-stockx-api.herokuapp.com/users/fullvalue', {
                 method: 'GET',
                 crossDomain: true,
                 credentials: 'include',
@@ -61,8 +55,8 @@ const MainPage = (props) => {
                 .then(result => {setUserValue(result)})
                 .catch((error) => console.log(error))
             
-            
-            fetch('https://vv-stockx-api.herokuapp.com/users/bidvalue', {
+            fetch('https://localhost:3000/users/bidvalue', {
+            // fetch('https://vv-stockx-api.herokuapp.com/users/bidvalue', {
                 method: 'GET',
                 credentials: 'include',
                 crossDomain: true,
