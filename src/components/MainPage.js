@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import '../styles/MainPage.css'
 import SearchBar from './SearchBar'
 import MyCollection from './MyCollection'
 import CollectionItem from './CollectionItem'
-import {useHistory} from "react-router-dom";
 
 const rand = require('random-key')
 
@@ -13,7 +12,7 @@ const MainPage = (props) => {
     const [userValue, setUserValue] = useState('loading...')
     const [numItems, setNumItems] = useState(0)
     const [canUpdate, setCanUpdate] = useState(true)
-    let history = useHistory();
+    
 
 
     if(!props.userInfo.item_collection){

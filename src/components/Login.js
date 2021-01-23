@@ -1,12 +1,6 @@
 import React,{useState} from 'react'
 import '../styles/Login.css'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useHistory
-  } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 const Login = (props) => {
     const [username, setUsername] = useState('')

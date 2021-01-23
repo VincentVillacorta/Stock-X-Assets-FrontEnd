@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Login from './components/Login'
 import MainPage from './components/MainPage'
@@ -19,7 +19,6 @@ function App() {
   const [userInfo, changeUserInfo] = useState({})
   const [waitingForLogin, setWaitingForLogin] = useState(true)
   const [showAbout, setShowAbout] = useState(false)
-  const [mainPageCanUpdate, setMainPageCanUpdate] = useState(false)
   
   const onAboutClick = (event) => {
     const val = !showAbout;
@@ -31,7 +30,7 @@ function App() {
       <Router>
         <div className="full-page">
             <div className="navbar">
-              <img src={logo}/>
+              <img src={logo} alt="S-X-A Logo"/>
                 <div className="link-group">
                     <Link className="link" to="/">Login</Link>
                     <Link className="link" to="/dashboard">Dashboard</Link> 
